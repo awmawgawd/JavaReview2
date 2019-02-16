@@ -128,7 +128,28 @@ public class FirstClass {
 		// Static Example 2
 		printNumber(2);
 		
+		System.out.println("------------------");
 		
+		// Class constructor example
+		FourthClass fourthClass = new FourthClass();
+		
+		/* This prints out 'USA' as the Class constructor was called.*/
+		System.out.println(fourthClass.getCountry());
+		
+		/* This prints out 'USA' even though country was initialized to 'Japan' first. */
+		System.out.println(fourthClass.country);
+		
+		/* Prints out language 'Japanese' */
+		System.out.println(fourthClass.language);
+		
+		/*
+		 * 1. fourthClass object of class FourthClass is created.
+		 * 2. When object is created, country is initialized to 'Japan', language to 'Japanese'.
+		 * 3. Then, the Class constructor is called and assigns 'USA' to country.
+		 * 4. After object is created, the returned value of fourthClass.getCountry is printed.
+		 * 5. Then, the value of the country attribute is printed.
+		 * 6. Then, the value of language is printed.
+		 */
 		
 	}
 	
@@ -144,3 +165,22 @@ class ThirdClass{
 		System.out.println(someWord);
 	}
 }
+
+class FourthClass{
+	
+	String country = "Japan";
+	String language = "Japanese";
+	
+	
+	// Class constructor
+	public FourthClass() {
+		country = "USA";
+	}
+	
+	public String getCountry() {
+		return country;
+	}
+}
+
+
+
